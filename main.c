@@ -1,92 +1,90 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "biblioteca.h"
-
-float suma(float, float);
-float resta(float,float);
-float division(float,float);
-float multiplicacion(float,float);
-int factorizacion1(int);
-int factorizacion2(int);
+#include "bibliotecaUtn.h"
+#include "bibliotecaEmployee.h"
+#define T 2
+#define FALSE -1
 
 int main()
 {
+    Employee ArrayEmployeeMain[T];
+    int index;
+    char name[50];
+    char lastName[50];
+    float salary;
+    int sector;
+    int optionMenu2;
+    index= findFree(ArrayEmployeeMain, T);
+    char optionMenu;
 
-    int opcion;
-    float operandoUno=0;
-    float operandoDos=0;
-    float resultadoSuma;
-    float resultadoResta;
-    float resultadoDivision;
-    float resultadoMultiplicacion;
-    int resultadoFactorizacionUno;
-    int resultadoFactorizacionDos;
+    initEmployees(ArrayEmployeeMain, T);
 
     do
     {
-        printf("1.ingrese el primer operando: %.2f\n", operandoUno);
-        printf("2.ingrese el segundo operando: %.2f\n", operandoDos);
-        printf("3.calcular todas las operaciones\n");
-        printf("4.informar todos los resultados\n");
-        printf("5.salir\n");
-        printf("ingrese una opcion: ");
-        scanf("%d", &opcion);
-        switch(opcion)
+
+        printf(" a. Alta\n m. Modificar\n b. Baja\n f. Informar\n");
+        optionMenu= getChar("\ningrese un caracter para la opcion que desee utilizar: ");
+
+        switch(optionMenu)
         {
-        case 1:
-            printf("ingrese el primer operando: ");
-            scanf("%f", &operandoUno);
-            break;
-        case 2:
-            printf("ingrese el segundo operando: ");
-            scanf("%f", &operandoDos);
-            break;
-        case 3:
-            resultadoSuma=suma(operandoUno, operandoDos);
-            resultadoResta=resta(operandoUno, operandoDos);
-            resultadoDivision= division(operandoUno, operandoDos);
-            resultadoMultiplicacion=multiplicacion(operandoUno, operandoDos);
-            resultadoFactorizacionUno= factorizacion1(operandoUno);
-            resultadoFactorizacionDos= factorizacion2(operandoDos);
+        case 'a':
 
-            break;
-        case 4:
-            printf("el resultado de la suma es: %.2f\n", resultadoSuma);
-            printf("el resultado de la resta es: %.2f\n", resultadoResta);
-            if(operandoDos== 0)
+            if(index!= FALSE)
             {
-                printf("no se puede dividir por cero!!\n");
+                  if(!getStringLetras("enter name: ", name))
+                     {
+                         printf("\nenter only letters\n");
+                         break;
+                     }
+
+                  if(!getStringLetras("enter last name: ", lastName))
+                  {
+
+                        printf("\nenter only letters\n");
+                        break;
+                  }
+
+                  salary= getFloat("enter the salary: ");
+                  sector= getInt("enter the sector: ");
+
+                  addEmployee(ArrayEmployeeMain,T, index, name, lastName, salary,sector);
+
             }
+
             else
             {
-                printf("el resultado de la division es: %.2f\n", resultadoDivision);
-            }
-            printf("el resultado de la multiplicacion es: %.2f\n", resultadoMultiplicacion);
-
-
-            if(operandoUno >= 0 && operandoDos <0)
-            {
-                printf("el factorial del primer operando es: %d y el segundo operando es negativo: no se puede factorizar por negativos!\n",resultadoFactorizacionUno);
-            }
-            else if(operandoUno<0 && operandoDos>= 0)
-            {
-                printf("el operando del primer factorial es negativo: no se puede factorizar por numeros negativos!! y el factorial del segundo operando es: %d\n",resultadoFactorizacionDos);
-            }
-            else
-            {
-                printf("el factorial del primer operando es: %d y el factorial del segundo operando es: %d\n", resultadoFactorizacionUno, resultadoFactorizacionDos);
+                printf("\nNo free space!\n");
             }
 
-
-        case 5: printf("\ngracias por utilizar la calculadora de matias!\n");
-
-        default:
             break;
+
+        case 'm':
+            break;
+
+        case 'b':
+            break;
+
+        case 'f':
+
+            printf("\n l. listado de empleados\n p. total, promedio de salarios y cuantos superan el salario minimo\n");
+            optionMenu2=getChar("\ningrese un caracter para la opcion que desee utilizar: ");
+
+            switch(optionMenu2)
+            {
+                case 'l':
+                    sortEmployees(ArrayEmployeeMain, T);
+                    break;
+
+                case 'n':
+                    break;
+            }
+            break;
+
         }
-        system("pause");
-        system("cls");
+
     }
-    while(opcion!=5);
-    return 0;
+    while(optionMenu!= 's');
 }
+
+
 
