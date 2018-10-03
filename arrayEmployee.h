@@ -1,5 +1,8 @@
 #ifndef ARRAYEMPLOYEE_H_INCLUDED
 #define ARRAYEMPLOYEE_H_INCLUDED
+#define T 1000
+#define TRUE 1
+#define FALSE -1
 
 typedef struct
 {

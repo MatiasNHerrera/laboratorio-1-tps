@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include "bibliotecaUtn.h"
 #include "arrayEmployee.h"
-#define T 3
-#define FALSE -1
 
 int main()
 {

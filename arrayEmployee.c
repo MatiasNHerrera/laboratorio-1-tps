@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include "bibliotecaUtn.h"
 #include "arrayEmployee.h"
-#define TRUE 1
-#define FALSE -1
-#define T 5
 #include <string.h>
 
 
@@ -386,8 +383,8 @@ int modifyEmployee(Employee *list, int len, int id)
     int auxSalary;
     int auxSector;
 
+    printEmployees(list,len);
     auxId = getInt("\ningrese el id del empleado que desea modificar: \n");
-
     auxOpcion= getInt(" 1. Modificar nombre\n 2. Modificar apellido\n 3. Modificar salario\n 4. modificar sector\n");
 
     for(i= 0; i<len; i++)
