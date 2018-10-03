@@ -1,68 +1,81 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "bibliotecaUtn.h"
-#include "bibliotecaEmployee.h"
-#define T 2
+#include "arrayEmployee.h"
+#define T 3
 #define FALSE -1
 
 int main()
 {
     Employee ArrayEmployeeMain[T];
-    int index;
-    char name[50];
-    char lastName[50];
-    float salary;
-    int sector;
+    int optionMenu3;
     int optionMenu2;
-    index= findFree(ArrayEmployeeMain, T);
-    char optionMenu;
+    char optionMenu= 's';
+    int flag= 0;
+    int auxId=0;
 
     initEmployees(ArrayEmployeeMain, T);
 
     do
     {
 
-        printf(" a. Alta\n m. Modificar\n b. Baja\n f. Informar\n");
+        printf("\n a. Alta\n m. Modificar\n b. Baja\n f. Informar\n");
         optionMenu= getChar("\ningrese un caracter para la opcion que desee utilizar: ");
 
         switch(optionMenu)
         {
         case 'a':
-
-            if(index!= FALSE)
+            if(addEmployee(ArrayEmployeeMain,T)!= FALSE)
             {
-                  if(!getStringLetras("enter name: ", name))
-                     {
-                         printf("\nenter only letters\n");
-                         break;
-                     }
-
-                  if(!getStringLetras("enter last name: ", lastName))
-                  {
-
-                        printf("\nenter only letters\n");
-                        break;
-                  }
-
-                  salary= getFloat("enter the salary: ");
-                  sector= getInt("enter the sector: ");
-
-                  addEmployee(ArrayEmployeeMain,T, index, name, lastName, salary,sector);
-
+                printf("\ncarga satisfactoria!!\n");
+                flag= 1;
             }
-
             else
             {
-                printf("\nNo free space!\n");
-            }
+                printf("\nno hay espacio libre!\n");
 
+            }
             break;
 
         case 'm':
+            if(flag== 1)
+            {
+
+                if(modifyEmployee(ArrayEmployeeMain, T, auxId)== 0)
+                    {
+                        printf("\nse ha modificado correctamente: \n");
+                    }
+                else
+                    {
+                        printf("\nNo se encontro id\n");
+                    }
+            }
+
+            if(flag==0)
+            {
+                printf("\nno se han ingresado datos todavia\n");
+            }
+
             break;
 
         case 'b':
-            break;
+            if(flag== 1)
+            {
+
+                if(removeEmployee(ArrayEmployeeMain,T) ==0)
+                {
+                    printf("\nSe ha removido exitosamente\n");
+                }
+                else
+                {
+                    printf("\nNo es posible remover\n");
+                }
+            }
+            else
+            {
+                printf("\nNo se ha cargado nada todavia!!\n");
+            }
+                    break;
 
         case 'f':
 
@@ -72,16 +85,54 @@ int main()
             switch(optionMenu2)
             {
                 case 'l':
-                    sortEmployees(ArrayEmployeeMain, T);
-                    break;
+                    printf("\n 1. Ordenar por apellido albeticamente\n 2. Ordenar por sector\n");
+                    optionMenu3= getInt("ingrese opcion para la funcion que desee realizar");
+                    switch(optionMenu3)
+                    {
+                        case 1:
+                        if(flag== 1)
+                        {
+                            sortEmployeesByLastName(ArrayEmployeeMain, T);
+                            printf("\nSe ha ordenado correctamente\n");
+                        }
+                        else
+                        {
+                            printf("\nno se ha cargado nada todavia!\n");
+                        }
+                        break;
 
-                case 'n':
-                    break;
-            }
+                        case 2:
+                        if(flag== 1)
+                        {
+                            sortEmployeesBySector(ArrayEmployeeMain,T);
+                            printf("\nSe ha ordenado correctamente\n");
+                        }
+                        else
+                        {
+                            printf("no se ha cargado nada todavia!\n");
+                        }
+                        break;
+                    }
+                break;
+
+                case 'p':
+                    if(flag== 1)
+                    {
+
+                        salaryAndPromedy(ArrayEmployeeMain, T);
+
+                    }
+                    else
+                    {
+                        printf("no se ha cargado nada todavia!\n");
+                    }
+            }       break;
             break;
 
         }
 
+       system("pause");
+       system("cls");
     }
     while(optionMenu!= 's');
 }
