@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1538430217 source:c:\users\matiash\desktop\trabajo practico laboratorio\bibliotecautn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1538432889 source:c:\users\matiash\desktop\trabajo practico laboratorio\main.c
+	<stdio.h>
+	<stdlib.h>
+	"bibliotecaUtn.h"
+	"bibliotecaEmployee.h"
+
+1538432895 c:\users\matiash\desktop\trabajo practico laboratorio\bibliotecaemployee.h
+
+1538430216 c:\users\matiash\desktop\trabajo practico laboratorio\bibliotecautn.h
+
+1538433037 source:c:\users\matiash\desktop\trabajo practico laboratorio\bibliotecaemployee.c
+	<stdio.h>
+	<stdlib.h>
+	"bibliotecaUtn.h"
+	"bibliotecaEmployee.h"
+	<string.h>
+
+1538430217 source:c:\users\matiash\desktop\trabajo practico laboratorio\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+

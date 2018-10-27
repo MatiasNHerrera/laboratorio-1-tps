@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1538534054 source:c:\users\matiash\desktop\practica programacion\laboratorio-1-tps\2do trabajo practico laboratorio\bibliotecaemployee.c
+	<stdio.h>
+	<stdlib.h>
+	"bibliotecaUtn.h"
+	"bibliotecaEmployee.h"
+	<string.h>
+
+1538430216 c:\users\matiash\desktop\practica programacion\laboratorio-1-tps\2do trabajo practico laboratorio\bibliotecautn.h
+
+1538534164 c:\users\matiash\desktop\practica programacion\laboratorio-1-tps\2do trabajo practico laboratorio\bibliotecaemployee.h
+
+1538582656 source:c:\users\matiash\desktop\practica programacion\laboratorio-1-tps\2do trabajo practico laboratorio\bibliotecautn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1540603887 source:c:\users\matiash\desktop\practica programacion\laboratorio-1-tps\2do trabajo practico laboratorio\main.c
+	<stdio.h>
+	<stdlib.h>
+	"bibliotecaUtn.h"
+	"arrayEmployee.h"
+
+1540605465 c:\users\matiash\desktop\practica programacion\laboratorio-1-tps\2do trabajo practico laboratorio\arrayemployee.h
+
+1540605380 source:c:\users\matiash\desktop\practica programacion\laboratorio-1-tps\2do trabajo practico laboratorio\arrayemployee.c
+	<stdio.h>
+	<stdlib.h>
+	"bibliotecaUtn.h"
+	"arrayEmployee.h"
+	<string.h>
+
