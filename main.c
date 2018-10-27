@@ -17,7 +17,7 @@ int main()
     do
     {
 
-        printf("\n a. Alta\n m. Modificar\n b. Baja\n f. Informar\n");
+        printf("\n a. Alta\n m. Modificar\n b. Baja\n f. Informar\n s. Salir\n");
         optionMenu= getChar("\ningrese un caracter para la opcion que desee utilizar: ");
 
         switch(optionMenu)

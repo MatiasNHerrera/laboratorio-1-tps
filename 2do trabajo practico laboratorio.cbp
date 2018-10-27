@@ -31,10 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="bibliotecaEmployee.c">
+		<Unit filename="arrayEmployee.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="bibliotecaEmployee.h" />
+		<Unit filename="arrayEmployee.h" />
 		<Unit filename="bibliotecaUtn.c">
 			<Option compilerVar="CC" />
 		</Unit>

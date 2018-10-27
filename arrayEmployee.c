@@ -185,24 +185,58 @@ void sortEmployeesByLastName(Employee* list, int len)
 {
     int i;
     int j;
-
+    char optionMenu= 's';
     Employee index;
 
-    for( i =0 ; i<len -1 ; i ++)
+    printf(" d. Ordenar de forma ascendente\n a. Ordenar de forma descendente");
+    optionMenu= getChar("\nIngrese caracter para la opcion que desee utilizar: \n");
+
+    if(optionMenu== 'd')
     {
-        for(j= i+1 ; j<len; j++)
+
+        for( i =0 ; i<len -1 ; i ++)
         {
-            if(list[i].isEmpty== 0)
+            for(j= i+1 ; j<len; j++)
             {
-                if(strcmp(list[i].lastName,list[j].lastName)>0)
+                if(list[i].isEmpty== 0)
                 {
-                    index = list[i];
-                    list[i] = list[j];
-                    list[j] = index;
+                    if(strcmp(list[i].lastName,list[j].lastName)> 0)
+                    {
+                        index = list[i];
+                        list[i] = list[j];
+                        list[j] = index;
+                    }
+                }
+            }
+        }
+
+    }
+
+    else if(optionMenu== 'a')
+    {
+        for(i = 0; i < len - 1; i++)
+        {
+            for(j= i+1; j < len; j++)
+            {
+                if(list[i].isEmpty == 0)
+                {
+
+                    if(strcmp(list[i].lastName, list[j].lastName) < 0)
+                    {
+                        index = list[j];
+                        list[j] = list[i];
+                        list[i] = index;
+                    }
                 }
             }
         }
     }
+
+    else
+    {
+        printf("\n La opcion ingresada es incorrecta\n");
+    }
+
     printEmployees(list,len);
 }
 /** \brief Sort the elements by sector
@@ -227,7 +261,7 @@ void sortEmployeesBySector(Employee* list, int len)
             if(list[i].isEmpty== 0)
             {
 
-                if(list[i].sector > list[j].sector)
+                if(list[i].sector <= list[j].sector)
                 {
                     index = list[i];
                     list[i] = list[j];
