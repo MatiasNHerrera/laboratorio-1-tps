@@ -1,0 +1,191 @@
+# depslib dependency file v1.0
+1541255760 source:e:\bibliotecautn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1541441608 source:e:\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"bibliotecaUtn.h"
+	<string.h>
+	"Controller.h"
+
+1533133022 e:\win_64\linkedlist.h
+
+1541096978 e:\win_64\employee.h
+
+1533133022 e:\win_64\parser.h
+
+1538431558 e:\win_64\bibliotecautn.h
+
+1541432916 e:\win_64\controller.h
+
+1541252662 source:e:\win_64\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"bibliotecaUtn.h"
+	"LinkedList.h"
+	"Employee.h"
+	"string.h"
+
+1541441678 source:e:\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1541441944 source:e:\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541255760 source:h:\bibliotecautn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1541638618 source:h:\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"bibliotecaUtn.h"
+	<string.h>
+	"Controller.h"
+
+1533133022 h:\win_64\linkedlist.h
+
+1541628314 h:\win_64\employee.h
+
+1533133022 h:\win_64\parser.h
+
+1538431558 h:\win_64\bibliotecautn.h
+
+1541630696 h:\win_64\controller.h
+
+1541628330 source:h:\win_64\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"bibliotecaUtn.h"
+	"LinkedList.h"
+	"Employee.h"
+	"string.h"
+
+1541639528 source:h:\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1541640016 source:h:\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541798188 source:c:\users\matiash\desktop\win_64\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"bibliotecaUtn.h"
+	"LinkedList.h"
+	"Employee.h"
+	"string.h"
+
+1538431558 c:\users\matiash\desktop\win_64\bibliotecautn.h
+
+1533133022 c:\users\matiash\desktop\win_64\linkedlist.h
+
+1541798202 c:\users\matiash\desktop\win_64\employee.h
+
+1541639528 source:c:\users\matiash\desktop\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1541798227 c:\users\matiash\desktop\win_64\controller.h
+
+1541640016 source:c:\users\matiash\desktop\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541799004 source:c:\users\matiash\desktop\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"bibliotecaUtn.h"
+	<string.h>
+	"Controller.h"
+
+1533133022 c:\users\matiash\desktop\win_64\parser.h
+
+1538431558 source:c:\users\matiash\desktop\win_64\bibliotecautn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1538431558 source:c:\users\alumno\desktop\win_64\bibliotecautn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1541857238 source:c:\users\alumno\desktop\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"bibliotecaUtn.h"
+	<string.h>
+	"Controller.h"
+
+1533133022 c:\users\alumno\desktop\win_64\linkedlist.h
+
+1541856973 c:\users\alumno\desktop\win_64\employee.h
+
+1533133022 c:\users\alumno\desktop\win_64\parser.h
+
+1538431558 c:\users\alumno\desktop\win_64\bibliotecautn.h
+
+1541856913 c:\users\alumno\desktop\win_64\controller.h
+
+1541857627 source:c:\users\alumno\desktop\win_64\employee.c
+	<stdio.h>
+	<ctype.h>
+	<stdlib.h>
+	"bibliotecaUtn.h"
+	"LinkedList.h"
+	"Employee.h"
+	"string.h"
+
+1541855353 source:c:\users\alumno\desktop\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"bibliotecaUtn.h"
+
+1541854978 source:c:\users\alumno\desktop\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
